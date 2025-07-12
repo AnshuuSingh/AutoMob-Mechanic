@@ -1,0 +1,1 @@
+AutoMob Mechanic is a responsive front-end web project designed for car service booking and management. It allows users to explore automotive services, schedule appointments, and view booking reports — all with a clean and user-friendly interface.
