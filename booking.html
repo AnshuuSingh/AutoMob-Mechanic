@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking | AutoMob-Mechanic</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="booking.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="#" class="brand">
+          <i class="fa-solid fa-car"></i> AutoMob-Mechanic
+        </a>
+        <i class="fa-solid fa-bars" id="hamburger"></i>
+        <div class="nav-lists" id="navLinks">
+          <a href="home.html">Home</a>
+          <a href="login.html" id="login">Login</a>
+          <a href="reports.html" id="reports">Reports</a>
+          <a href="services.html">Services</a>
+          <a href="booking.html">Booking</a>
+          <a href="login.html" id="reports">Logout</a>
+          <a class="mail" href="mailto:contact@automob.co.in"
+            >contact@automob.co.in <i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Booking Form -->
+    <div class="heading">
+      <h1 id="heading">Book <span id="service">Your</span> Service</h1>
+      <hr class="custom-line" />
+    </div>
+
+    <main>
+      <section>
+        <div class="left">
+          <form action="appointment.html" method="GET" autocomplete="off">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                pattern="[A-Za-z]+ [A-Za-z]+"
+                title="Enter first and last name, alphabets only"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Id:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="code">Phone Number:</label>
+              <div class="phone-wrapper">
+                <select id="code" name="code" required>
+                  <option value="code" selected disabled>code</option>
+                  <option value="+213">+213</option>
+                  <option value="+91">+91</option>
+                  <option value="+244">+244</option>
+                  <option value="+61">+61</option>
+                </select>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern="[0-9]{10}"
+                  title="Enter 10 digit phone number"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Select Service:</label>
+              <select name="service" id="service" required>
+                <option value="">--Select--</option>
+                <option value="preventive">
+                  Preventive Maintenance Service
+                </option>
+                <option value="repair">Body Repair Service</option>
+                <option value="carcare">Car Care Service</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="car-make">Car Make:</label>
+              <input list="make" id="car-make" name="car-make" required />
+              <datalist id="make">
+                <option value="Mahindra"></option>
+                <option value="Honda"></option>
+                <option value="Hyundai"></option>
+                <option value="Ford"></option>
+                <option value="Toyota"></option>
+                <option value="Nissan"></option>
+              </datalist>
+            </div>
+
+            <!-- <div class="form-group">
+              <label for="car-model">Car Model:</label>
+              <input type="text" id="car-model" name="car-model" required />
+            </div> -->
+
+            <div class="form-group">
+              <label>Fuel Type:</label>
+              <div class="radio-group">
+                <input type="radio" name="fuel" value="Petrol" required />
+                Petrol <input type="radio" name="fuel" value="Diesel" /> Diesel
+                <input type="radio" name="fuel" value="LPG" /> LPG
+                <input type="radio" name="fuel" value="Others" /> Others
+              </div>
+            </div>
+
+            <!-- <div class="form-group">
+                    <label for="km">Kilometers Ran:</label>
+                    <input type="number" id="km" name="km" placeholder="..km" required>
+                </div> -->
+            <div class="button">
+              <button type="submit">Schedule an Appointment</button>
+            </div>
+          </form>
+        </div>
+        <div class="right">
+          <img src="assets/booking.jpg" alt="Booking Image" />
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2020 AutoMob-Mechanic. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+main {
+  display: block;
+  padding-bottom: 100px; 
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.heading {
+  margin: 60px 20px 20px;
+  font-size: 30px;
+}
+#service {
+  color: #f5496c;
+}
+.custom-line {
+  border: none;
+  height: 3px;
+  background-color: #056384;
+  width: 100%;
+  margin: 5px auto;
+  border-radius: 5px;
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+section p {
+  width: 80%;
+  margin: 5px;
+}
+.card-box {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.card {
+  border-radius: 20px;
+  margin: 20px;
+  border: solid grey 1px;
+  width: 30%;
+  padding: 10px;
+}
+.card img {
+  height: 120px;
+  object-fit: contain;
+}
+.card:hover {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+}
+.inner-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .card-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 60%;
+  }
+  .card p {
+    display: none;
+  }
+  main {
+    min-height: 100%;
+    height: auto;
+    overflow: auto;
+  }
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width : 769px) and (max-width : 1024px){
+  body{
+    overflow-x: hidden;
+  }
+  .card-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .card{
+    width: 60%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1199.98px){
+  .card-box{
+    width: 90vw;
+  }
+  .card{
+    width: 30%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px){
+  .card-box{
+    width: 85vw;
+  }
+}

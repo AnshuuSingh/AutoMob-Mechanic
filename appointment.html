@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment | AutoMob-Mechanic</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="appointment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="#" class="brand">
+          <i class="fa-solid fa-car"></i> AutoMob-Mechanic
+        </a>
+        <i class="fa-solid fa-bars" id="hamburger"></i>
+        <div class="nav-lists" id="navLinks">
+          <a href="home.html">Home</a>
+          <a href="login.html" id="login">Login</a>
+          <a href="reports.html" id="reports">Reports</a>
+          <a href="services.html">Services</a>
+          <a href="booking.html">Booking</a>
+          <a href="login.html" id="reports">Logout</a>
+          <a class="mail" href="mailto:contact@automob.co.in"
+            >contact@automob.co.in <i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+
+    <hr>
+
+    <!-- Appointment Form -->
+    <main>
+        <section>
+            <div class="heading">
+                <h3>Schedule <span>Your</span> Appointment</h3>
+                <hr class="custom-line">
+            </div>
+            <form action="booking-success.html" method="GET" autocomplete="off">
+
+                <!-- Appointment Date -->
+                <div class="form-group">
+                    <label for="appointment-date">Appointment Date:</label>
+                    <input type="date" id="appointment-date" name="appointment-date" required>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address">Address:</label><br>
+                    <textarea id="address" name="address" rows="4" cols="40" required></textarea>
+                </div>
+
+                <!-- City -->
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <!-- State -->
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <input list="states" id="state" name="state" required>
+                    <datalist id="states">
+                        <option value="Assam">
+                        <option value="Bihar">
+                        <option value="Gujarat">
+                        <option value="Goa">
+                        <option value="Kerala">
+                    </datalist>
+                </div>
+
+                <!-- Notification -->
+                <div class="checkbox-group">
+                    <label>Send Notification:</label>
+                    <input type="checkbox" id="email" name="notify" value="Email" required>Email
+                    <input type="checkbox" id="sms" name="notify" value="SMS">SMS
+                </div>
+
+                <!-- Submit -->
+                <div class="button">
+                    <button type="submit">Book</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © 2020 AutoMob-Mechanic. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById("appointment-date").setAttribute("min", today);
+        console.log(today);
+    </script>
+</body>
+
+</html>
