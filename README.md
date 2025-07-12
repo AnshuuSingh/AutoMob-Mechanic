@@ -7,6 +7,6 @@ AutoMob Mechanic is a full-stack web application for managing car services. User
 📊 View service reports (fetched from MongoDB)  
 🔐 Basic login page (optional future integration)
 
-TECHNOLOGIES USED  
+🛠️ TECHNOLOGIES USED  
 Frontend : HTML5, CSS3, Vanilla JavaScript  
 Backend : Node.js (Express), MongoDB (via Mongoose)
